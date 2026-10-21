@@ -122,3 +122,33 @@ async function refreshDownloads() {
   }
 }
 refreshDownloads();
+
+
+// Enhance image links with a full-size view; links still work without JavaScript.
+const overviewLightbox = document.querySelector('#overview-lightbox');
+if (overviewLightbox && typeof overviewLightbox.showModal === 'function') {
+  const lightboxImage = overviewLightbox.querySelector('#overview-lightbox-image');
+  const lightboxTitle = overviewLightbox.querySelector('#overview-lightbox-title');
+  const originalLink = overviewLightbox.querySelector('#overview-original-link');
+  let previousImageLink;
+  document.querySelectorAll('a[data-overview-image]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      previousImageLink = link;
+      lightboxImage.src = link.href;
+      lightboxImage.alt = link.dataset.imageAlt;
+      lightboxTitle.textContent = link.dataset.imageTitle;
+      originalLink.href = link.href;
+      overviewLightbox.showModal();
+    });
+  });
+  overviewLightbox.querySelector('.overview-lightbox-close').addEventListener('click', () => overviewLightbox.close());
+  overviewLightbox.addEventListener('click', event => {
+    if (event.target !== overviewLightbox) return;
+    const bounds = overviewLightbox.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right ||
+        event.clientY < bounds.top || event.clientY > bounds.bottom) overviewLightbox.close();
+  });
+  overviewLightbox.addEventListener('close', () => previousImageLink?.focus());
+}

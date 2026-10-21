@@ -9,7 +9,7 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - Match the main website palette: cream #F7F4EE, text #2B2B2B, teal #2F5D62, hover #163A40, navigation #af9d83, border #BFB4A5, footer #D9D0C3, muted #5E564D.
 - Match its fonts: IBM Plex Sans for headings/navigation/buttons, IBM Plex Serif for body text.
 - Preserve the supplied default RYBA logo and the alternate larger-fish logo. Swap to the alternate on hover and keyboard focus; keep the touch toggle.
-- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Clearly label schematic placeholders until real screenshots replace them.
+- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview now uses the user-provided Geometry Workshop screenshot, UV–Vis screenshot and exported thermochemical diagram.
 - Keep CNAME set to ryba.nevesely.science and preserve .nojekyll. Hosting is GitHub Pages in this repository.
 
 ## Release history and numbering
@@ -35,3 +35,9 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - The section is currently under construction. Keep the notice and planned-example wording until complete, verified guides and usable sample files are published.
 - Initial topics are ORCA input preparation, UV–Vis spectrum generation from TD-DFT results, and thermochemical diagrams.
 - Do not add dead tutorial/download links or present the outlines as finished guides. Real screenshots and sample files can replace the planned outlines when ready.
+
+## Overview images
+
+- Preserve the supplied scientific screenshots and exported graph without generative edits, altered values or redrawn molecular structures.
+- The overview image assets retain the original uploaded bytes. CSS frames the previews and crops only the UV–Vis thumbnail to focus on the spectrum. Full originals are accessible through native image links and the accessible dialog.
+- Preserve the full-size view, close button, Escape support and direct original-image links. Image links must still work when JavaScript is unavailable.

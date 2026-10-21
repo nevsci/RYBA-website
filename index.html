@@ -85,49 +85,46 @@
 
     <section class="section overview-section" id="overview" aria-labelledby="overview-title">
       <div class="shell">
-        <div class="section-header"><div><p class="section-index"><span aria-hidden="true">He</span> Overview</p><h2 id="overview-title">A closer look<br>at the workspace.</h2></div><p class="section-intro">From setting up a molecule to exploring a spectrum: a place for each part of the workflow. Choose a view below.</p></div>
+        <div class="section-header"><div><p class="section-index"><span aria-hidden="true">He</span> Overview</p><h2 id="overview-title">A closer look<br>at the workspace.</h2></div><p class="section-intro">Explore the Geometry Workshop, a calculated UV–Vis spectrum and an exported energy profile. Choose a view below.</p></div>
         <div class="preview-tabs">
-          <button class="preview-tab" id="tab-prepare" type="button" aria-controls="preview-prepare">H &nbsp; Inputs &amp; geometry</button>
-          <button class="preview-tab" id="tab-spectra" type="button" aria-controls="preview-spectra">He &nbsp; Results &amp; spectra</button>
-          <button class="preview-tab" id="tab-energy" type="button" aria-controls="preview-energy">Li &nbsp; Energies &amp; conformers</button>
+          <button class="preview-tab" id="tab-prepare" type="button" aria-controls="preview-prepare">H &nbsp; Geometry Workshop</button>
+          <button class="preview-tab" id="tab-spectra" type="button" aria-controls="preview-spectra">He &nbsp; UV–Vis spectra</button>
+          <button class="preview-tab" id="tab-energy" type="button" aria-controls="preview-energy">Li &nbsp; Thermochemistry</button>
         </div>
         <div class="preview-panel" id="preview-prepare" aria-labelledby="tab-prepare">
           <div class="preview-layout">
-            <div class="preview-copy"><span class="small-label">Prepare</span><h3>Start with<br>the molecule.</h3><p>Bring in a structure, check its geometry and choose the calculation you want to run.</p><a href="#features">Input generator &amp; Geometry Workshop <span aria-hidden="true">↗</span></a></div>
-            <div class="preview-window" role="img" aria-label="Schematic placeholder for the RYBA input and geometry view. A real screenshot will replace this illustration.">
-              <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>RYBA / Input &amp; geometry</span><span class="placeholder-label">Preview placeholder</span></div>
-              <div class="ui-content" aria-hidden="true"><div class="ui-sidebar"><b>RYBA</b><span class="selected">Input generator</span><span>Geometry</span><span>Method &amp; basis</span><span>Solvent</span><span>Resources</span></div><div class="ui-main"><div class="ui-label"><span>Molecular geometry</span><span>3D view</span></div>
-                <svg class="molecule-illustration" viewBox="0 0 460 215" fill="none"><g stroke="#BFB4A5" stroke-width="7" stroke-linecap="round"><path d="m139 83 61-35 62 35v70l-62 35-61-35Zm123 0 65-24m-65 94 57 31M139 83l-57-27m57 97-55 31"/></g><g stroke="#2F5D62" stroke-width="2"><circle cx="139" cy="83" r="13" fill="#F7F4EE"/><circle cx="200" cy="48" r="13" fill="#D9D0C3"/><circle cx="262" cy="83" r="13" fill="#F7F4EE"/><circle cx="262" cy="153" r="13" fill="#D9D0C3"/><circle cx="200" cy="188" r="13" fill="#F7F4EE"/><circle cx="139" cy="153" r="13" fill="#D9D0C3"/><circle cx="327" cy="59" r="16" fill="#2F5D62"/><circle cx="319" cy="184" r="10" fill="#F7F4EE"/><circle cx="82" cy="56" r="10" fill="#F7F4EE"/><circle cx="84" cy="184" r="10" fill="#F7F4EE"/></g><path d="M365 148v35h33" stroke="#BFB4A5" stroke-width="1.5"/><text x="404" y="186">x</text><text x="361" y="140">y</text></svg>
-                <div class="ui-bottom"><span class="ui-chip">Geometry</span><span class="ui-chip">Method</span><span class="ui-chip">Basis set</span><span class="ui-chip">Solvent</span></div>
-              </div></div>
-            </div>
+            <div class="preview-copy"><span class="small-label">Prepare</span><h3>Build, inspect<br>and refine.</h3><p>Edit molecular structures in the Geometry Workshop, adjust geometries and prepare them for the Input Builder.</p><a href="#features">Geometry Workshop <span aria-hidden="true">↗</span></a></div>
+            <figure class="overview-figure">
+              <a class="overview-image-link" href="assets/img/overview-geometry-workshop.png" data-overview-image data-image-title="Geometry Workshop" data-image-alt="RYBA Geometry Workshop showing a ball-and-stick molecular structure, refinement constraints and atom-editing controls." aria-label="View Geometry Workshop image at full size">
+                <span class="overview-image-stage"><img src="assets/img/overview-geometry-workshop.png" width="2048" height="1240" loading="lazy" decoding="async" alt="RYBA Geometry Workshop showing a ball-and-stick molecular structure, refinement constraints and atom-editing controls."></span>
+              </a>
+              <figcaption><span>Geometry Workshop</span><a class="overview-open" href="assets/img/overview-geometry-workshop.png" data-overview-image data-image-title="Geometry Workshop" data-image-alt="RYBA Geometry Workshop showing a ball-and-stick molecular structure, refinement constraints and atom-editing controls.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+            </figure>
           </div>
         </div>
         <div class="preview-panel" id="preview-spectra" aria-labelledby="tab-spectra">
           <div class="preview-layout">
-            <div class="preview-copy"><span class="small-label">Explore</span><h3>Let the results<br>take shape.</h3><p>Turn calculated transitions into a spectrum and compare the patterns across your molecules.</p><a href="#features">Output reader &amp; spectroscopy <span aria-hidden="true">↗</span></a></div>
-            <div class="preview-window" role="img" aria-label="Schematic placeholder for RYBA spectrum comparison, with two illustrative curves. These curves are not calculation data.">
-              <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>RYBA / Spectroscopy</span><span class="placeholder-label">Preview placeholder</span></div>
-              <div class="ui-content" aria-hidden="true"><div class="ui-sidebar"><b>RYBA</b><span>Summary</span><span>Structures</span><span class="selected">Spectra</span><span>Transitions</span><span>Plot settings</span></div><div class="ui-main"><div class="ui-label"><span>Spectrum comparison</span><span>Illustrative</span></div>
-                <svg class="plot-placeholder" viewBox="0 0 460 215" fill="none"><g stroke="#BFB4A5" stroke-width=".7" opacity=".6"><path d="M40 40h390M40 85h390M40 130h390"/></g><path d="M40 18v157h390" stroke="#5E564D" stroke-width="1"/><path d="M43 173c35 0 36-14 57-14s19 13 40 13 33-11 48-53 24-74 42-74 23 40 36 81 27 47 48 47h113" stroke="#2F5D62" stroke-width="3"/><path d="M43 172h59c31 0 39-53 58-53s24 53 48 53 38-17 54-67 23-77 40-77 25 48 36 88 29 57 49 57h40" stroke="#af9d83" stroke-width="2.5" stroke-dasharray="7 4"/><text x="235" y="204" text-anchor="middle">Wavelength</text><text x="15" y="100" transform="rotate(-90 15 100)" text-anchor="middle">Intensity</text><path d="M331 16h16" stroke="#2F5D62" stroke-width="2"/><text x="354" y="20">A</text><path d="M383 16h16" stroke="#af9d83" stroke-width="2"/><text x="406" y="20">B</text></svg>
-                <div class="ui-bottom"><span class="ui-chip">Broadening</span><span class="ui-chip">Compare</span><span class="ui-chip">Plot style</span><span class="ui-chip">Export</span></div>
-              </div></div>
-            </div>
+            <div class="preview-copy"><span class="small-label">Explore</span><h3>From transitions<br>to a spectrum.</h3><p>Broaden calculated transitions, inspect oscillator strengths and style the spectrum for export.</p><a href="#features">UV–Vis spectroscopy <span aria-hidden="true">↗</span></a></div>
+            <figure class="overview-figure">
+              <a class="overview-image-link" href="assets/img/overview-uvvis-spectrum.png" data-overview-image data-image-title="UV–Vis spectrum" data-image-alt="RYBA UV–Vis spectrum view with a broadened turquoise absorption curve, yellow transition sticks, wavelength and intensity axes, appearance settings and export controls." aria-label="View UV–Vis spectrum image at full size">
+                <span class="overview-image-stage"><span class="overview-spectrum-crop"><img src="assets/img/overview-uvvis-spectrum.png" width="1765" height="1766" loading="lazy" decoding="async" alt="RYBA UV–Vis spectrum view with a broadened turquoise absorption curve, yellow transition sticks, wavelength and intensity axes, appearance settings and export controls."></span></span>
+              </a>
+              <figcaption><span>Calculated UV–Vis spectrum</span><a class="overview-open" href="assets/img/overview-uvvis-spectrum.png" data-overview-image data-image-title="UV–Vis spectrum" data-image-alt="RYBA UV–Vis spectrum view with a broadened turquoise absorption curve, yellow transition sticks, wavelength and intensity axes, appearance settings and export controls.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+            </figure>
           </div>
         </div>
         <div class="preview-panel" id="preview-energy" aria-labelledby="tab-energy">
           <div class="preview-layout">
-            <div class="preview-copy"><span class="small-label">Understand</span><h3>See how<br>the pieces fit.</h3><p>Connect structures with relative energies, then explore the relationships across a profile or conformer ensemble.</p><a href="#features">Thermochemistry &amp; GOAT explorer <span aria-hidden="true">↗</span></a></div>
-            <div class="preview-window" role="img" aria-label="Schematic placeholder for an RYBA energy profile with four levels. No numerical calculation results are shown.">
-              <div class="window-bar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>RYBA / Thermochemistry</span><span class="placeholder-label">Preview placeholder</span></div>
-              <div class="ui-content" aria-hidden="true"><div class="ui-sidebar"><b>RYBA</b><span>Calculations</span><span class="selected">Energy profile</span><span>Conformers</span><span>Populations</span><span>Export</span></div><div class="ui-main"><div class="ui-label"><span>Relative energies</span><span>Illustrative</span></div>
-                <svg class="plot-placeholder" viewBox="0 0 460 215" fill="none"><path d="M41 20v163h389" stroke="#5E564D" stroke-width="1"/><path d="m99 115 82-74m40 0 70 104m40 0 61-65" stroke="#af9d83" stroke-width="1.5" stroke-dasharray="5 5"/><g stroke="#2F5D62" stroke-width="4" stroke-linecap="round"><path d="M64 115h49M170 41h49M282 145h49M378 80h42"/></g><text x="88" y="101" text-anchor="middle">A</text><text x="194" y="27" text-anchor="middle">B</text><text x="307" y="131" text-anchor="middle">C</text><text x="400" y="66" text-anchor="middle">D</text><text x="235" y="203" text-anchor="middle">Reaction coordinate</text><text x="15" y="100" transform="rotate(-90 15 100)" text-anchor="middle">Relative energy</text></svg>
-                <div class="ui-bottom"><span class="ui-chip">Reference</span><span class="ui-chip">Energy type</span><span class="ui-chip">Structures</span><span class="ui-chip">Export</span></div>
-              </div></div>
-            </div>
+            <div class="preview-copy"><span class="small-label">Understand</span><h3>Give energies<br>a clear profile.</h3><p>Compare reaction states in a thermochemical diagram with relative energies, barriers and molecular structures.</p><a href="#features">Thermochemistry assistant <span aria-hidden="true">↗</span></a></div>
+            <figure class="overview-figure">
+              <a class="overview-image-link" href="assets/img/overview-thermochemical-profile.png" data-overview-image data-image-title="Thermochemical diagram" data-image-alt="Reaction energy profile exported from RYBA, showing seven molecular structures, labelled relative energies and barriers in kcal per mole." aria-label="View Thermochemical diagram image at full size">
+                <span class="overview-image-stage is-chart"><img src="assets/img/overview-thermochemical-profile.png" width="2048" height="1399" loading="lazy" decoding="async" alt="Reaction energy profile exported from RYBA, showing seven molecular structures, labelled relative energies and barriers in kcal per mole."></span>
+              </a>
+              <figcaption><span>Exported thermochemical diagram</span><a class="overview-open" href="assets/img/overview-thermochemical-profile.png" data-overview-image data-image-title="Thermochemical diagram" data-image-alt="Reaction energy profile exported from RYBA, showing seven molecular structures, labelled relative energies and barriers in kcal per mole.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+            </figure>
           </div>
         </div>
-        <p class="preview-note">Schematic previews for now. Actual RYBA screenshots will follow.</p>
+        <p class="preview-note">Screenshots from RYBA and an example energy-profile export. Select an image to enlarge.</p>
       </div>
     </section>
 
@@ -205,6 +202,11 @@
     </section>
     <div class="shell contact-strip"><div><h2>Ideas, questions or a particularly stubborn output?</h2><p>RYBA is growing. Feedback from real calculations helps shape what comes next.</p></div><a href="mailto:ryba@nevesely.science">Get in touch <span aria-hidden="true">↗</span></a></div>
   </main>
+  <dialog class="overview-lightbox" id="overview-lightbox" aria-labelledby="overview-lightbox-title">
+    <div class="overview-lightbox-toolbar"><h2 id="overview-lightbox-title">RYBA image</h2><button class="overview-lightbox-close" type="button" aria-label="Close image">Close <span aria-hidden="true">×</span></button></div>
+    <img class="overview-lightbox-image" id="overview-lightbox-image" alt="">
+    <div class="overview-lightbox-footer"><a id="overview-original-link" target="_blank" rel="noopener">Open original image <span aria-hidden="true">↗</span></a><span>Esc to close</span></div>
+  </dialog>
   <footer class="site-footer"><div class="shell"><div class="footer-top"><div><span class="footer-brand">RYBA</span>Created by Tomáš Neveselý</div><div class="footer-links"><a href="https://nevesely.science/">nevesely.science <span aria-hidden="true">↗</span></a><a href="mailto:ryba@nevesely.science">Contact</a><a href="#top">Back to top ↑</a></div></div><p class="footer-disclaimer">RYBA is an independent project and is not affiliated with the ORCA developers.</p></div></footer>
 </body>
 </html>

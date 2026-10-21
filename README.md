@@ -16,7 +16,7 @@ The download buttons use absolute URLs to those same files. On page load, the si
 
 ## Editing
 
-Replace the three explicitly labelled schematic previews with real RYBA screenshots when available. Keep their captions descriptive and retain useful alternative text. The logo frame is CSS, so it can be adjusted without modifying either image.
+The Overview section uses the supplied real Geometry Workshop and UV–Vis screenshots, plus an exported thermochemical energy profile. The scientific image files are unchanged; CSS frames the previews and focuses the UV–Vis thumbnail on the plot. Select an image to open the full-size dialog or follow its original-image link. Keep captions descriptive and preserve useful alternative text. The logo frame is CSS, so it can be adjusted without modifying either image.
 
 Preview locally with `python -m http.server 8000` from the repository root. The static page also renders without JavaScript; JavaScript adds the overview tabs and refreshes download links.
 
@@ -51,3 +51,11 @@ Keep the native data-goatcounter-click binding; do not add a second click handle
 The Tutorials navigation link opens the under-construction section on the homepage. It outlines three planned guides: preparing an ORCA input, generating a UV–Vis spectrum and building a thermochemical diagram. There are no unfinished guide pages or placeholder download links. Add real screenshots and verified example files as the full guides are completed; update the construction notice accordingly.
 
 The homepage anchors are not separate sitemap URLs.
+
+## Overview image provenance
+
+- assets/img/overview-geometry-workshop.png: supplied obrazek(20261021-203939).png (2048 × 1240).
+- assets/img/overview-uvvis-spectrum.png: supplied obrazek(20261021-204130).png (1765 × 1766).
+- assets/img/overview-thermochemical-profile.png: supplied Reaction_thermochemistry(1).png (2048 × 1399).
+
+Original image bytes are retained. No scientific values, axes or structures were changed. The Tutorials section remains under construction.
