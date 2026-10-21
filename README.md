@@ -37,3 +37,11 @@ Do not create independent binary copies in this website repository. Historical f
 ## Element sequence markers
 
 Main sections use large H, He and Li tiles. Features use smaller H–C markers and the Overview tabs use H, He and Li. These are ordered element symbols, not scientific data. Preserve normal capitalization.
+
+## GoatCounter
+
+Both sites send to the existing nevesely.goatcounter.com dashboard. assets/js/analytics.js loads before the official count.js and prefixes pageviews with /ryba, so the dedicated homepage appears as /ryba/ and the personal site's historical paths stay unchanged.
+
+Download events retain the same version/platform names used by the personal website, combining the click totals. The data-goatcounter-referrer attribute distinguishes the two source pages within each event's referrer breakdown. Current download-link synchronization leaves this source attribute intact.
+
+Keep the native data-goatcounter-click binding; do not add a second click handler. The metrics measure download-link clicks, not completed file transfers.

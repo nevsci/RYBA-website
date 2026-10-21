@@ -20,3 +20,11 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - Upload new binaries once, to the main website repository. Update its downloads.md and this website's latest HTML links/version labels to those same new files.
 - Add the previous public release (version and original platform links) to Older versions on the dedicated RYBA website. The personal website can continue to show only the latest release. The archive stores links/metadata, not separate binary copies.
 - Archived links must not carry data-download or data-release-for attributes: assets/js/site.js refreshes only the latest-release controls. Never replace historical links with the current release during synchronization.
+
+## Analytics
+
+- Both websites use https://nevesely.goatcounter.com/count. RYBA pageviews are prefixed with /ryba via assets/js/analytics.js so its homepage remains distinct from the personal homepage.
+- Keep the ordered defer script loading: analytics.js before the official GoatCounter count.js. Do not add a second event handler or send duplicate click events.
+- Download clicks on both websites must use the same version/platform data-goatcounter-click event names and data-goatcounter-title values, so totals aggregate in the existing dashboard.
+- Use data-goatcounter-referrer to identify the clicked page: https://ryba.nevesely.science/ for RYBA, https://nevesely.science/downloads/ for the personal website. Keep this source attribute when refreshing latest download links.
+- Archived download links also retain the original version/platform GoatCounter event names and the RYBA source referrer. Archived links must not use the latest-release synchronization attributes.
