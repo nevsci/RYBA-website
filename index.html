@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123a44">
+  <meta name="description" content="RYBA is a graphical workspace for preparing ORCA calculations and exploring computational chemistry results.">
+  <title>RYBA — A workspace for ORCA</title>
+  <style>
+    :root{color-scheme:light;--ink:#163943;--muted:#516b70;--accent:#087c78;--paper:#f4f7f4}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    main{max-width:1080px;margin:auto;padding:40px 28px 64px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid #cedbd8;padding-bottom:20px}
+    .brand{font-size:26px;font-weight:800;letter-spacing:.14em}
+    a{color:var(--accent);text-underline-offset:4px}
+    a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+    .hero{padding:82px 0 54px;max-width:800px}
+    .eyebrow{color:var(--accent);font-size:13px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}
+    h1{font-size:clamp(42px,7vw,76px);line-height:1.08;letter-spacing:-.045em;margin:20px 0 26px;font-weight:750}
+    .intro{font-size:21px;max-width:670px;color:var(--muted)}
+    .notice{display:inline-block;border:1px solid #c7d9d4;border-radius:50px;padding:7px 15px;font-size:14px;margin-top:20px;background:#e9f0ec}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:24px 0 48px}
+    article{border-top:2px solid #8db8ae;padding-top:20px}
+    h2{font-size:19px;line-height:1.35;margin:0 0 12px}
+    article p{margin:0;color:var(--muted)}
+    footer{border-top:1px solid #cedbd8;padding-top:22px;color:var(--muted);font-size:14px}
+    @media(max-width:650px){main{padding:26px 22px 40px}.hero{padding-top:54px}.features{grid-template-columns:1fr;gap:28px}header a{font-size:14px}.intro{font-size:19px}}
+  </style>
+</head>
+<body>
+  <main>
+    <header><span class="brand">RYBA</span><a href="https://nevesely.science/">Tomáš Neveselý</a></header>
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">Computational chemistry, in view</p>
+      <h1 id="title">A workspace<br>for ORCA.</h1>
+      <p class="intro">Prepare calculations, explore molecular structures and turn computational results into clear spectra, energy diagrams and reports.</p>
+      <p class="notice">Our dedicated website is taking shape.</p>
+      <p>For current RYBA information and downloads, visit <a href="https://nevesely.science/">nevesely.science</a>.</p>
+    </section>
+    <section class="features" aria-label="RYBA features">
+      <article><h2>Prepare</h2><p>Build ORCA inputs and work with molecular geometries through a graphical interface.</p></article>
+      <article><h2>Explore</h2><p>Inspect output files, conformer ensembles, thermochemistry and calculated spectra.</p></article>
+      <article><h2>Present</h2><p>Create figures and assemble calculation results for reports and supporting information.</p></article>
+    </section>
+    <footer>Created by Tomáš Neveselý. RYBA is an independent project and is not affiliated with the ORCA developers.</footer>
+  </main>
+</body>
+</html>
