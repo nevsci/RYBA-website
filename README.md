@@ -2,7 +2,7 @@
 
 Static website for **https://ryba.nevesely.science**, published from the root of `main` with GitHub Pages. No build step or Jekyll theme is required.
 
-- `index.html`: homepage, Features, Overview and Downloads.
+- `index.html`: homepage, Features, Overview, Tutorials & Examples and Downloads.
 - `assets/css/site.css`: layout and the palette/fonts shared with nevesely.science.
 - `assets/js/site.js`: overview tabs, accessible mobile navigation, touch logo toggle and download-link synchronization.
 - `assets/img/ryba-logo.png`: supplied original logo.
@@ -45,3 +45,9 @@ Both sites send to the existing nevesely.goatcounter.com dashboard. assets/js/an
 Download events retain the same version/platform names used by the personal website, combining the click totals. The data-goatcounter-referrer attribute distinguishes the two source pages within each event's referrer breakdown. Current download-link synchronization leaves this source attribute intact.
 
 Keep the native data-goatcounter-click binding; do not add a second click handler. The metrics measure download-link clicks, not completed file transfers.
+
+## Tutorials and examples
+
+The Tutorials navigation link opens the under-construction section on the homepage. It outlines three planned guides: preparing an ORCA input, generating a UV–Vis spectrum and building a thermochemical diagram. There are no unfinished guide pages or placeholder download links. Add real screenshots and verified example files as the full guides are completed; update the construction notice accordingly.
+
+The homepage anchors are not separate sitemap URLs.

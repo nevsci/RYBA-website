@@ -38,6 +38,7 @@
       <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
         <a class="nav-link" href="#features">Features</a>
         <a class="nav-link" href="#overview">Overview</a>
+        <a class="nav-link" href="#tutorials">Tutorials</a>
         <a class="nav-link" href="#downloads">Downloads</a>
         <a class="nav-link nav-author" href="https://nevesely.science/">Tomáš Neveselý <span aria-hidden="true">↗</span></a>
       </nav>
@@ -130,8 +131,46 @@
       </div>
     </section>
 
+
+    <section class="section tutorial-section" id="tutorials" aria-labelledby="tutorials-title">
+      <div class="shell">
+        <div class="section-header">
+          <div><p class="section-index"><span aria-hidden="true">Li</span> Tutorials &amp; examples</p><h2 id="tutorials-title">Learn RYBA,<br>one example at a time.</h2></div>
+          <p class="section-intro">Practical walkthroughs for preparing ORCA calculations and turning their results into spectra, energy profiles and chemical insight.</p>
+        </div>
+        <div class="tutorial-construction">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m14 5 5 5m-4-7 6 6-3 3-6-6ZM13 9 4 18l2 2 9-9M3 21h18"/></svg>
+          <div><p class="tutorial-status">Under construction</p><p class="tutorial-construction-copy">We are preparing the guides, screenshots and example files. The outlines below show what is coming.</p></div>
+        </div>
+        <div class="tutorial-grid">
+          <article class="tutorial-card" aria-labelledby="tutorial-input-title">
+            <p class="tutorial-category"><span aria-hidden="true">H /</span> Input preparation</p>
+            <h3 id="tutorial-input-title">Create an ORCA input</h3>
+            <p class="tutorial-description">Start with a molecular structure and prepare a calculation using RYBA’s input generator.</p>
+            <ul class="tutorial-outline"><li>Import and check the geometry.</li><li>Choose the job, method, basis set and solvent.</li><li>Review the settings and export the input.</li></ul>
+            <p class="tutorial-files">Planned examples <span>ORCA input &amp; molecular geometry</span></p>
+          </article>
+          <article class="tutorial-card" aria-labelledby="tutorial-uvvis-title">
+            <p class="tutorial-category"><span aria-hidden="true">He /</span> Spectroscopy</p>
+            <h3 id="tutorial-uvvis-title">Generate a UV–Vis spectrum</h3>
+            <p class="tutorial-description">Turn calculated electronic transitions into a readable spectrum and compare the results.</p>
+            <ul class="tutorial-outline"><li>Load an ORCA TD-DFT output.</li><li>Choose the broadening and wavelength range.</li><li>Style, compare and export the spectra.</li></ul>
+            <p class="tutorial-files">Planned examples <span>TD-DFT output &amp; spectrum</span></p>
+          </article>
+          <article class="tutorial-card" aria-labelledby="tutorial-thermo-title">
+            <p class="tutorial-category"><span aria-hidden="true">Li /</span> Thermochemistry</p>
+            <h3 id="tutorial-thermo-title">Build a thermochemical diagram</h3>
+            <p class="tutorial-description">Bring the energies of a reaction’s structures together in a clear, labelled profile.</p>
+            <ul class="tutorial-outline"><li>Assign calculations to the reaction states.</li><li>Choose the energy type, units and reference.</li><li>Arrange, label and export the diagram.</li></ul>
+            <p class="tutorial-files">Planned examples <span>ORCA outputs &amp; energy profile</span></p>
+          </article>
+        </div>
+        <p class="tutorial-note">Full tutorials and downloadable example files will appear here as they are completed.</p>
+      </div>
+    </section>
+
     <section class="section download-section shell" id="downloads" aria-labelledby="downloads-title">
-      <div class="section-header"><div><p class="section-index"><span aria-hidden="true">Li</span> Downloads</p><h2 id="downloads-title">Make room for<br>a small fish.</h2></div><p class="section-intro">Choose the package for your system and start exploring. These are the same RYBA downloads available on nevesely.science.</p></div>
+      <div class="section-header"><div><p class="section-index"><span aria-hidden="true">Be</span> Downloads</p><h2 id="downloads-title">Make room for<br>a small fish.</h2></div><p class="section-intro">Choose the package for your system and start exploring. These are the same RYBA downloads available on nevesely.science.</p></div>
       <div class="downloads-grid">
         <article class="download-card" aria-labelledby="windows-title">
           <div class="os-heading"><svg class="os-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="m3 6 11-1.5v10H3Zm15-2 11-1.5v12H18ZM3 18h11v10L3 26.5Zm15 0h11v12L18 28.5Z"/></svg><div><h3 class="os-name" id="windows-title">Windows</h3><div class="os-description">64-bit · Portable executable</div></div></div>

@@ -28,3 +28,10 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - Download clicks on both websites must use the same version/platform data-goatcounter-click event names and data-goatcounter-title values, so totals aggregate in the existing dashboard.
 - Use data-goatcounter-referrer to identify the clicked page: https://ryba.nevesely.science/ for RYBA, https://nevesely.science/downloads/ for the personal website. Keep this source attribute when refreshing latest download links.
 - Archived download links also retain the original version/platform GoatCounter event names and the RYBA source referrer. Archived links must not use the latest-release synchronization attributes.
+
+## Tutorials and examples
+
+- Keep Tutorials & Examples between Overview and Downloads, linked from the main navigation. Preserve periodic-table section order: H Features, He Overview, Li Tutorials, Be Downloads.
+- The section is currently under construction. Keep the notice and planned-example wording until complete, verified guides and usable sample files are published.
+- Initial topics are ORCA input preparation, UV–Vis spectrum generation from TD-DFT results, and thermochemical diagrams.
+- Do not add dead tutorial/download links or present the outlines as finished guides. Real screenshots and sample files can replace the planned outlines when ready.
