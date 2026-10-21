@@ -36,7 +36,7 @@ Do not create independent binary copies in this website repository. Historical f
 
 ## Element sequence markers
 
-Main sections use large H, He and Li tiles. Features use smaller H–C markers and the Overview tabs use H, He and Li. These are ordered element symbols, not scientific data. Preserve normal capitalization.
+Main sections use large H, He and Li tiles. Features use smaller H–O markers and the Overview tabs use H, He, Li, Be and B. These are ordered element symbols, not scientific data. Preserve normal capitalization.
 
 ## GoatCounter
 
@@ -59,3 +59,18 @@ The homepage anchors are not separate sitemap URLs.
 - assets/img/overview-thermochemical-profile.png: supplied Reaction_thermochemistry(1).png (2048 × 1399).
 
 Original image bytes are retained. No scientific values, axes or structures were changed. The Tutorials section remains under construction.
+
+## GOAT and IR visualisations
+
+The dedicated feature entries and two additional Overview tabs use real supplied ORCA data, rendered as scientific illustrations rather than interface screenshots:
+
+- `assets/img/overview-goat-ensemble.png`: source conformers 0 and 1, rigidly aligned on the six-carbon aromatic ring (file atoms 1–6), with all 39 populations from the final GOAT table at 298.15 K. Hydrogen atoms are hidden. Alignment does not modify the geometries or imply a constrained calculation.
+- `assets/img/overview-ir-spectrum.png`: the last IR table in TS1.out, with 119 positive modes. Lorentzian broadening uses FWHM 12 cm⁻¹, frequency scale 1.000 and a normalised intensity axis. The single imaginary mode at −147.16 cm⁻¹ is disclosed separately.
+
+`assets/data/overview-provenance.json` records original-file hashes and processing choices. Original ORCA files remain local. To regenerate (Python with numpy, scipy and matplotlib):
+
+```sh
+python scripts/render-overview.py --ir /path/to/TS1.out --goat /path/to/SP_171.out --ensemble /path/to/SP_171.finalensemble.xyz
+```
+
+Keep the full-size image viewer and the visible distinction between application screenshots and data visualisations.

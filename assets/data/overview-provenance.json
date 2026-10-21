@@ -1,0 +1,80 @@
+{
+  "kind": "Scientific illustrations generated from supplied ORCA data; not application screenshots.",
+  "sources": {
+    "TS1.out": "486cd5aa65e760f276d1ee5a0f500c584dcb5d44266b158167a6b8731f16734b",
+    "SP_171.out": "71d814d85a37a90ec35d40a80ab4c9ff985b45278e5d21d6f1c9a3e1c4b8ca9d",
+    "SP_171.finalensemble.xyz": "f34e187a38b8584d3c96315b9e7ac2040d669f2b2cb0dd017100f48944d0c56b"
+  },
+  "ir": {
+    "source_job": "last IR SPECTRUM / last VIBRATIONAL FREQUENCIES",
+    "positive_ir_modes": 119,
+    "imaginary_frequency_cm_1": -147.16,
+    "imaginary_source_mode_id": 6,
+    "frequency_scale": 1.0,
+    "broadening": "area-normalised Lorentzian, FWHM 12 cm^-1; curve normalised to its maximum",
+    "strongest_stick_frequency_cm_1": 1383.11
+  },
+  "goat": {
+    "conformers": 39,
+    "temperature_K": 298.15,
+    "selected_source_ids": [
+      0,
+      1
+    ],
+    "alignment_atom_ids_1_based": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "core_rmsd_A": 0.007129929678759155,
+    "relative_energies_kcal_mol": [
+      0.0,
+      0.111
+    ],
+    "reported_populations_percent": [
+      13.25,
+      10.98,
+      7.7,
+      6.76,
+      5.78,
+      5.48,
+      5.1,
+      4.93,
+      4.55,
+      4.14,
+      4.0,
+      3.91,
+      3.08,
+      2.93,
+      1.86,
+      1.62,
+      1.41,
+      1.27,
+      1.26,
+      1.09,
+      1.06,
+      0.95,
+      0.75,
+      0.7,
+      0.69,
+      0.64,
+      0.6,
+      0.58,
+      0.54,
+      0.54,
+      0.54,
+      0.48,
+      0.43,
+      0.31,
+      0.07,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "notes": "Populations copied from final GOAT table, not recomputed; atom ordering and energies checked against XYZ. Proper-rotation rigid core fit; hydrogens hidden; no bond orders inferred."
+  }
+}

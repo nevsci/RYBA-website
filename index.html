@@ -78,18 +78,22 @@
         <article class="feature"><span class="feature-number" aria-hidden="true">He /</span><div><h3>Work with the structure</h3><p>Inspect molecules in 3D, measure distances and angles, and adjust geometries in the Geometry Workshop. Add atoms or fragments and prepare structures for the next calculation.</p><div class="feature-tags"><span class="tag">3D viewer</span><span class="tag">Geometry Workshop</span></div></div></article>
         <article class="feature"><span class="feature-number" aria-hidden="true">Li /</span><div><h3>Make sense of the output</h3><p>Find the important results without searching through the whole output file. Inspect calculation progress, energies, geometries and method information in a structured view.</p><div class="feature-tags"><span class="tag">Output reader</span><span class="tag">Calculation summary</span></div></div></article>
         <article class="feature"><span class="feature-number" aria-hidden="true">Be /</span><div><h3>See the spectrum</h3><p>Explore calculated electronic transitions, plot and compare UV–Vis spectra, and work with NMR shieldings and references. Adjust presentation settings to make the results easier to read.</p><div class="feature-tags"><span class="tag">TD-DFT &amp; UV–Vis</span><span class="tag">NMR workshop</span></div></div></article>
-        <article class="feature"><span class="feature-number" aria-hidden="true">B /</span><div><h3>Compare energies &amp; conformers</h3><p>Build thermochemical profiles and explore GOAT ensembles. Connect conformer structures with their relative energies, populations and geometrical differences.</p><div class="feature-tags"><span class="tag">Thermochemistry</span><span class="tag">GOAT explorer</span></div></div></article>
-        <article class="feature"><span class="feature-number" aria-hidden="true">C /</span><div><h3>Bring the results together</h3><p>Export molecular views and plots, then collect structures, energies and calculation details into reports and supporting information. Keep the context alongside the result.</p><div class="feature-tags"><span class="tag">Figures &amp; spectra</span><span class="tag">Reports &amp; ESI</span></div></div></article>
+        <article class="feature"><span class="feature-number" aria-hidden="true">B /</span><div><h3>Map the energy landscape</h3><p>Bring reaction states together in thermochemical profiles. Compare relative energies and barriers, choose the reference and energy type, and include molecular structures in the exported diagram.</p><div class="feature-tags"><span class="tag">Thermochemistry</span><span class="tag">Energy profiles</span></div></div></article>
+        <article class="feature" id="feature-goat"><span class="feature-number" aria-hidden="true">C /</span><div><h3>Explore the conformer ensemble</h3><p>Pair a GOAT output with its final ensemble to connect structures, relative energies and populations. Compare conformers in a ghost overlay and align a shared core to see where their geometries differ.</p><div class="feature-tags"><span class="tag">GOAT explorer</span><span class="tag">Populations &amp; overlays</span></div></div></article>
+        <article class="feature" id="feature-ir"><span class="feature-number" aria-hidden="true">N /</span><div><h3>Read the vibrational fingerprint</h3><p>Turn calculated vibrational frequencies and IR intensities into a spectrum. Inspect individual modes, identify imaginary frequencies and bring the vibrational results into the analysis.</p><div class="feature-tags"><span class="tag">IR analysis</span><span class="tag">Vibrational frequencies</span></div></div></article>
+        <article class="feature"><span class="feature-number" aria-hidden="true">O /</span><div><h3>Bring the results together</h3><p>Export molecular views and plots, then collect structures, energies and calculation details into reports and supporting information. Keep the context alongside the result.</p><div class="feature-tags"><span class="tag">Figures &amp; spectra</span><span class="tag">Reports &amp; ESI</span></div></div></article>
       </div>
     </section>
 
     <section class="section overview-section" id="overview" aria-labelledby="overview-title">
       <div class="shell">
-        <div class="section-header"><div><p class="section-index"><span aria-hidden="true">He</span> Overview</p><h2 id="overview-title">A closer look<br>at the workspace.</h2></div><p class="section-intro">Explore the Geometry Workshop, a calculated UV–Vis spectrum and an exported energy profile. Choose a view below.</p></div>
+        <div class="section-header"><div><p class="section-index"><span aria-hidden="true">He</span> Overview</p><h2 id="overview-title">A closer look<br>at the workspace.</h2></div><p class="section-intro">Explore molecular editing, spectra, reaction energies and conformer ensembles. Choose a view below.</p></div>
         <div class="preview-tabs">
           <button class="preview-tab" id="tab-prepare" type="button" aria-controls="preview-prepare">H &nbsp; Geometry Workshop</button>
           <button class="preview-tab" id="tab-spectra" type="button" aria-controls="preview-spectra">He &nbsp; UV–Vis spectra</button>
           <button class="preview-tab" id="tab-energy" type="button" aria-controls="preview-energy">Li &nbsp; Thermochemistry</button>
+          <button class="preview-tab" id="tab-goat" type="button" aria-controls="preview-goat">Be &nbsp; GOAT explorer</button>
+          <button class="preview-tab" id="tab-ir" type="button" aria-controls="preview-ir">B &nbsp; IR analysis</button>
         </div>
         <div class="preview-panel" id="preview-prepare" aria-labelledby="tab-prepare">
           <div class="preview-layout">
@@ -124,7 +128,29 @@
             </figure>
           </div>
         </div>
-        <p class="preview-note">Screenshots from RYBA and an example energy-profile export. Select an image to enlarge.</p>
+        <div class="preview-panel" id="preview-goat" aria-labelledby="tab-goat">
+          <div class="preview-layout">
+            <div class="preview-copy"><span class="small-label">Compare</span><h3>One core.<br>Many conformations.</h3><p>Two conformers from a real GOAT ensemble, aligned on a shared aromatic ring. A ghost overlay reveals the differences; the population plot puts them in context.</p><a href="#feature-goat">GOAT explorer <span aria-hidden="true">↗</span></a></div>
+            <figure class="overview-figure">
+              <a class="overview-image-link" href="assets/img/overview-goat-ensemble.png" data-overview-image data-image-title="GOAT conformer ensemble" data-image-alt="Scientific visualisation from SP_171: conformers 0 and 1 overlaid after rigid alignment on aromatic atoms C1–C6, with the 39 reported populations at 298.15 K." aria-label="View GOAT conformer ensemble image at full size">
+                <span class="overview-image-stage"><img src="assets/img/overview-goat-ensemble.png" width="2400" height="1500" loading="lazy" decoding="async" alt="Scientific visualisation from SP_171: conformers 0 and 1 overlaid after rigid alignment on aromatic atoms C1–C6, with the 39 reported populations at 298.15 K."></span>
+              </a>
+              <figcaption><span>GOAT overlay &amp; populations · visualisation from supplied data</span><a class="overview-open" href="assets/img/overview-goat-ensemble.png" data-overview-image data-image-title="GOAT conformer ensemble" data-image-alt="Scientific visualisation from SP_171: conformers 0 and 1 overlaid after rigid alignment on aromatic atoms C1–C6, with the 39 reported populations at 298.15 K.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="preview-panel" id="preview-ir" aria-labelledby="tab-ir">
+          <div class="preview-layout">
+            <div class="preview-copy"><span class="small-label">Resolve</span><h3>Find the<br>vibrational signature.</h3><p>A calculated IR spectrum from TS1.out, with harmonic bands and a broadened curve. The single imaginary mode is identified separately from the positive-frequency spectrum.</p><a href="#feature-ir">IR analysis <span aria-hidden="true">↗</span></a></div>
+            <figure class="overview-figure">
+              <a class="overview-image-link" href="assets/img/overview-ir-spectrum.png" data-overview-image data-image-title="Calculated IR spectrum" data-image-alt="Scientific visualisation of the final TS1 IR calculation: 119 positive-frequency modes, a Lorentzian-broadened spectrum and one imaginary mode at minus 147.16 inverse centimetres." aria-label="View Calculated IR spectrum image at full size">
+                <span class="overview-image-stage"><img src="assets/img/overview-ir-spectrum.png" width="2400" height="1500" loading="lazy" decoding="async" alt="Scientific visualisation of the final TS1 IR calculation: 119 positive-frequency modes, a Lorentzian-broadened spectrum and one imaginary mode at minus 147.16 inverse centimetres."></span>
+              </a>
+              <figcaption><span>Calculated IR spectrum · visualisation from supplied data</span><a class="overview-open" href="assets/img/overview-ir-spectrum.png" data-overview-image data-image-title="Calculated IR spectrum" data-image-alt="Scientific visualisation of the final TS1 IR calculation: 119 positive-frequency modes, a Lorentzian-broadened spectrum and one imaginary mode at minus 147.16 inverse centimetres.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+            </figure>
+          </div>
+        </div>
+        <p class="preview-note">RYBA screenshots, an exported energy profile and scientific visualisations from supplied ORCA files. GOAT and IR panels illustrate real data; they are not interface screenshots. Select an image to enlarge.</p>
       </div>
     </section>
 
