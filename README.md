@@ -16,7 +16,7 @@ The download buttons use absolute URLs to those same files. On page load, the si
 
 ## Editing
 
-The Overview section uses five scientific visualisations from real RYBA project and ORCA data, with a consistent dark frame. Select an image to open the full-size dialog or follow its original-image link. Keep captions descriptive and preserve useful alternative text. The original screenshots remain unchanged as source references. The logo frame is CSS, so it can be adjusted without modifying either image.
+The Overview section uses five supplied RYBA screenshots and figures, with a consistent frame. Select an image to open the full-size dialog or follow its original-image link. Keep captions descriptive and preserve useful alternative text. Image bytes and scientific content are preserved; the combined spectra image keeps its portrait aspect ratio. The logo frame is CSS, so it can be adjusted without modifying either image.
 
 Preview locally with `python -m http.server 8000` from the repository root. The static page also renders without JavaScript; JavaScript adds the overview tabs and refreshes download links.
 
@@ -34,9 +34,9 @@ The Older versions disclosure is initially empty and closed. Once a new compiled
 
 Do not create independent binary copies in this website repository. Historical files remain shared with the main website even when they are no longer listed on its latest-download page.
 
-## Element sequence markers
+## Roman sequence markers
 
-Main sections use large H, He and Li tiles. Features use smaller H–O markers and the Overview tabs use H, He, Li, Be and B. These are ordered element symbols, not scientific data. Preserve normal capitalization.
+Main sections use large framed I–IV tiles. Features use smaller I–VIII markers, Overview tabs I–V and tutorial outlines I–III. The square frames and visual hierarchy remain; chemical labels and scientific values are unchanged.
 
 ## GoatCounter
 
@@ -52,41 +52,18 @@ The Tutorials navigation link opens the under-construction section on the homepa
 
 The homepage anchors are not separate sitemap URLs.
 
-## Overview image provenance
+## Active Overview images
 
-- assets/img/overview-geometry-workshop.png: supplied obrazek(20261021-203939).png (2048 × 1240).
-- assets/img/overview-uvvis-spectrum.png: supplied obrazek(20261021-204130).png (1765 × 1766).
-- assets/img/overview-thermochemical-profile.png: supplied Reaction_thermochemistry(1).png (2048 × 1399).
+| View | Website asset | Supplied source |
+| --- | --- | --- |
+| Geometry & input | assets/img/overview-geometry-workshop.png | obrazek(20261021-203939).png |
+| IR · UV–Vis · NMR | assets/img/overview-spectra-user.png | Spectra.png |
+| Thermochemistry | assets/img/overview-thermochemistry-user.png | Reaction_thermochemistry(2).png |
+| GOAT explorer | assets/img/overview-goat-user.png | GOAT.png |
+| Coordinate scans | assets/img/overview-coordinate-scans-user.png | obrazek(20261022-121035).png |
 
-Original image bytes are retained. No scientific values, axes or structures were changed. The Tutorials section remains under construction.
+The four new images retain the exact supplied PNG bytes; hashes and dimensions are recorded in `assets/data/supplied-overview-images.json`. The existing geometry screenshot is also unmodified. Images scale inside their frames and remain accessible at full size. The portrait spectra composite displays all three plots without a crop.
 
-## GOAT and IR visualisations
+The spectroscopy copy explicitly covers IR, UV–Vis and NMR. Force-field coordinate scans have their own feature entry and Overview tab. The thermochemical image uses kJ/mol. GOAT's supplied population chart is normalised within the filtered subset; its selection controls retain the full-ensemble coverage.
 
-The dedicated feature entries and two additional Overview tabs use real supplied ORCA data, rendered as scientific illustrations rather than interface screenshots:
-
-- `assets/img/overview-goat-ensemble.png`: source conformers 0 and 1, rigidly aligned on the six-carbon aromatic ring (file atoms 1–6), with all 39 populations from the final GOAT table at 298.15 K. Hydrogen atoms are hidden. Alignment does not modify the geometries or imply a constrained calculation.
-- `assets/img/overview-ir-spectrum.png`: the last IR table in TS1.out, with 119 positive modes. Lorentzian broadening uses FWHM 12 cm⁻¹, frequency scale 1.000 and a normalised intensity axis. The single imaginary mode at −147.16 cm⁻¹ is disclosed separately.
-
-`assets/data/overview-provenance.json` records original-file hashes and processing choices. Original ORCA files remain local. To regenerate (Python with numpy, scipy and matplotlib):
-
-```sh
-python scripts/render-overview.py --ir /path/to/TS1.out --goat /path/to/SP_171.out --ensemble /path/to/SP_171.finalensemble.xyz
-```
-
-Keep the full-size image viewer and the visible distinction between application screenshots and data visualisations.
-
-## Figures from the saved RYBA project
-
-The first three active Overview figures are now rendered from the supplied saved project:
-
-- `assets/img/overview-geometry-render.png`: the 23-atom Fum_ketone structure from the input Geometry Workshop, including saved bond orders and hydrogens. No optimisation or geometry changes are applied.
-- `assets/img/overview-uvvis-render.png`: all ten singlet transitions in TTT-wHPBE, checked against the embedded ORCA length-gauge table. Gaussian broadening retains the saved 0.30 eV FWHM; the profile is normalised and plotted over 250–800 nm, with oscillator strengths on a separate axis.
-- `assets/img/overview-thermochemistry-render.png`: Closed form → TS1 → CCC → TS2 → CTC → TS3 → CTT, using final printed Gibbs energies at 298.15 K relative to Closed form, with the saved geometry assignments. Independent rigid camera rotations accommodate different source atom orders. Hydrogens are hidden in the small structure views.
-
-All three figures are 2400 × 1500 PNGs, with no thumbnail crop. `assets/data/project-overview-provenance.json` records the archive/state hashes and exact rendering choices. The project ZIP, extracted state and embedded outputs remain local. To regenerate:
-
-```sh
-python scripts/render-project-overview.py /path/to/saved-project.ryba.zip
-```
-
-The earlier supplied screenshots and thermochemical export keep their original filenames and bytes as source references. They are no longer the active website previews.
+Earlier data-rendering scripts, rendered figures and provenance files remain as historical source references. They no longer supply the active Overview images. The Tutorials section remains under construction.

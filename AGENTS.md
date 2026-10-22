@@ -9,12 +9,12 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - Match the main website palette: cream #F7F4EE, text #2B2B2B, teal #2F5D62, hover #163A40, navigation #af9d83, border #BFB4A5, footer #D9D0C3, muted #5E564D.
 - Match its fonts: IBM Plex Sans for headings/navigation/buttons, IBM Plex Serif for body text.
 - Preserve the supplied default RYBA logo and the alternate larger-fish logo. Swap to the alternate on hover and keyboard focus; keep the touch toggle.
-- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview uses five scientific visualisations generated from the user’s saved RYBA project and ORCA files. Keep dedicated GOAT and IR feature entries.
+- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview uses five user-supplied RYBA images: geometry/input, combined IR–UV–Vis–NMR spectra, thermochemistry, GOAT, and coordinate scans. Keep the spectra and force-field scan capabilities explicit.
 - Keep CNAME set to ryba.nevesely.science and preserve .nojekyll. Hosting is GitHub Pages in this repository.
 
 ## Release history and numbering
 
-- Use periodic-table symbols instead of sequence numbers: H, He, Li, Be, B, C, etc. Main section symbols are larger framed tiles; subordinate feature markers and Overview tab symbols remain smaller. Preserve correct chemical capitalization (He, Li, Be), including under text-transform rules.
+- Use Roman numerals for all website sequence markers. Main sections use larger framed I–IV tiles; features use smaller I–VIII markers, Overview tabs I–V, and tutorial outlines I–III. Preserve the existing square frames, palette and typographic hierarchy. Do not change chemical symbols or numeric scientific data inside images or prose.
 - Keep the native, initially collapsed Older versions disclosure below the latest downloads. It currently has no release entries; do not list the current release as an older version.
 - When publishing a new compiled RYBA release, preserve the currently published version's immutable, versioned files in nevsci/nevsci.github.io. Do not overwrite or delete them.
 - Upload new binaries once, to the main website repository. Update its downloads.md and this website's latest HTML links/version labels to those same new files.
@@ -31,28 +31,18 @@ This repository publishes the static website at https://ryba.nevesely.science.
 
 ## Tutorials and examples
 
-- Keep Tutorials & Examples between Overview and Downloads, linked from the main navigation. Preserve periodic-table section order: H Features, He Overview, Li Tutorials, Be Downloads.
+- Keep Tutorials & Examples between Overview and Downloads, linked from the main navigation. Preserve section order and Roman numerals: I Features, II Overview, III Tutorials, IV Downloads.
 - The section is currently under construction. Keep the notice and planned-example wording until complete, verified guides and usable sample files are published.
 - Initial topics are ORCA input preparation, UV–Vis spectrum generation from TD-DFT results, and thermochemical diagrams.
 - Do not add dead tutorial/download links or present the outlines as finished guides. Real screenshots and sample files can replace the planned outlines when ready.
 
 ## Overview images
 
-- Preserve the supplied scientific screenshots and exported graph without generative edits, altered values or redrawn molecular structures.
-- The original uploaded screenshots remain unchanged in the repository for provenance. Active previews use newly rendered scientific figures in separate assets; do not crop their axes, structures or labels. Full figures are accessible through native image links and the accessible dialog.
-- Preserve the full-size view, close button, Escape support and direct original-image links. Image links must still work when JavaScript is unavailable.
-
-## Data-derived overview visualisations
-
-- All five active Overview images are scientific data illustrations. Keep their data origin clear in captions and the section note.
-- Regenerate with scripts/render-overview.py using the original local ORCA files; do not upload the raw outputs or ensemble here. assets/data/overview-provenance.json records hashes and rendering choices.
-- GOAT uses the reported final populations at 298.15 K, checked against 39 XYZ frames and their energies. Selected conformers use source IDs 0 and 1; rigid alignment on file atoms 1–6 changes only the view. Hide hydrogens for readability.
-- IR uses the last frequency job in TS1.out: 119 positive modes and a separate imaginary mode at −147.16 cm⁻¹. Keep scale/broadening and imaginary-mode disclosure visible; do not imply experimental data or a minimum.
-
-## Saved-project visualisations
-
-- Regenerate Geometry Workshop, UV–Vis and thermochemistry with scripts/render-project-overview.py and the original saved project ZIP. Keep the ZIP, extracted state and raw output files local; publish only rendered figures, scripts and provenance.
-- assets/data/project-overview-provenance.json records source hashes and processing choices. The archive state hash must match its manifest.
-- Geometry uses Fum_ketone: 23 original atoms, saved assigned bond orders and unchanged coordinates; camera rotations only.
-- UV–Vis uses all ten TTT-wHPBE singlet transitions, checked against the embedded electric-dipole table, with the saved Gaussian FWHM 0.30 eV. Keep oscillator strengths separate from the normalised curve axis.
-- Thermochemistry follows the saved seven-state order and geometry assignments, using the final printed Gibbs records at 298.15 K, in kcal/mol relative to Closed form. Different source atom orders must not be treated as matching atom indices.
+- Use the supplied images as-is; preserve original PNG bytes, scientific structures, data, units, axes and labels. CSS may frame and scale them without cropping their scientific content.
+- Geometry/input uses assets/img/overview-geometry-workshop.png, the earlier supplied Geometry Workshop screenshot. The four newer images are listed in assets/data/supplied-overview-images.json.
+- The spectra tab combines IR, UV–Vis and NMR in the supplied portrait composite. Mention all three in the feature and Overview copy. Preserve its natural portrait aspect ratio and the full-size image viewer.
+- Coordinate scans replace the separate IR Overview tab because IR is included in the combined spectra tab. Describe scans as integrated force-field scans; the supplied example is a relaxed MMFF94 dihedral scan, not an ORCA quantum calculation.
+- The new thermochemistry export uses kJ/mol; do not carry over kcal/mol descriptions from previous figures.
+- The supplied GOAT image shows filtered conformers, with populations renormalised within the selected subset. Do not describe it as a two-conformer ghost overlay or a complete unfiltered population distribution.
+- Preserve the full-size dialog, close button, Escape support, focus restoration and direct image links. Links must still work without JavaScript.
+- Earlier rendered figures and their scripts/provenance are historical assets, not active previews. Do not overwrite the user's supplied images with generated replacements unless explicitly asked.

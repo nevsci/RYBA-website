@@ -1,0 +1,37 @@
+{
+  "kind": "User-supplied RYBA screenshots and exports",
+  "images": [
+    {
+      "path": "assets/img/overview-spectra-user.png",
+      "source_filename": "Spectra.png",
+      "width": 1444,
+      "height": 1867,
+      "sha256": "7b43a740cfc3cff293ba3c5b3cfafda031df9cac52ecd066a3b6ba92774d7c15",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-thermochemistry-user.png",
+      "source_filename": "Reaction_thermochemistry(2).png",
+      "width": 2048,
+      "height": 1399,
+      "sha256": "662658a744bc3afd24b68fb64b2eee03eec11b03d910fa90237a39965751dd09",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-goat-user.png",
+      "source_filename": "GOAT.png",
+      "width": 1797,
+      "height": 1274,
+      "sha256": "6ea606c3d2a18c1b6e4dd2dd071083a7850e8d00293c19c1ab2febc2740d6e3a",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-coordinate-scans-user.png",
+      "source_filename": "obrazek(20261022-121035).png",
+      "width": 1492,
+      "height": 858,
+      "sha256": "b9800cb38c2f76303d5e376b8d6f51d685fc57b50eb3c54abaedee79beb3728d",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    }
+  ]
+}

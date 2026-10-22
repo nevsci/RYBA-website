@@ -14,7 +14,7 @@
 @media(hover:hover){.mascot-stage:hover{transform:rotate(0);box-shadow:7px 8px 0 var(--footer)}.mascot-stage:hover .logo-original{opacity:0}.mascot-stage:hover .logo-alternate{opacity:1}}
 
 
-/* Element symbols replace sequence numbers. Main sections use large element tiles;
+/* Roman numerals number the sections. Main sections use large framed tiles;
    feature markers and overview tabs stay deliberately smaller. */
 .section-index{display:flex;align-items:center;gap:14px}
 .section-index>span{display:inline-flex;align-items:center;justify-content:center;flex:0 0 48px;width:48px;height:48px;margin:0;border:1px solid var(--accent);border-radius:6px;font-size:28px;font-weight:600;line-height:1;letter-spacing:-.03em;text-transform:none}
@@ -55,7 +55,7 @@
 @media(max-width:1000px){.tutorial-grid{gap:14px}.tutorial-card{padding:23px 18px 20px}.tutorial-card h3{font-size:21px}}
 @media(max-width:760px){.tutorial-grid{grid-template-columns:1fr;gap:16px}.tutorial-construction{padding:17px 18px;gap:12px}.tutorial-construction-copy{font-size:13px}.tutorial-card{padding:24px}.tutorial-card h3{font-size:23px;min-height:0}.tutorial-category{margin-bottom:17px}.tutorial-note{font-size:11px}}
 
-/* Scientific overview figures share a frame and an accessible full-size viewer. */
+/* Supplied overview images share a frame and an accessible full-size viewer. */
 .overview-figure{margin:0;min-width:0}
 .overview-image-link{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 16px 34px rgba(63,54,42,.08)}
 .overview-image-stage{position:relative;display:block;aspect-ratio:16/10;background:#172025;overflow:hidden}
@@ -73,3 +73,7 @@
 .overview-lightbox-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:13px 21px;border-top:1px solid var(--line);font:400 11px/1.5 var(--sans);color:var(--muted)}
 .overview-lightbox-footer a{font-weight:600;text-decoration:none}
 @media(max-width:760px){.overview-figure figcaption{font-size:10px;gap:8px}.overview-open{font-size:10px}.overview-lightbox{width:calc(100% - 20px);max-width:calc(100vw - 20px);max-height:calc(100dvh - 24px)}.overview-lightbox-toolbar{padding:12px 14px;gap:12px}.overview-lightbox-toolbar h2{font-size:15px}.overview-lightbox-footer{padding:12px 14px;gap:12px;font-size:10px}.overview-lightbox-image{max-height:calc(100dvh - 145px)}}
+
+/* Keep all three plots readable in the supplied portrait spectra composite. */
+.overview-figure.is-portrait{width:100%;max-width:620px;justify-self:center}
+.overview-figure.is-portrait .overview-image-stage{aspect-ratio:1444/1867}
