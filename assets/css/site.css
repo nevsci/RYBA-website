@@ -76,4 +76,9 @@
 
 /* Keep all three plots readable in the supplied portrait spectra composite. */
 .overview-figure.is-portrait{width:100%;max-width:620px;justify-self:center}
-.overview-figure.is-portrait .overview-image-stage{aspect-ratio:1444/1867}
+.overview-figure.is-portrait .overview-image-stage{aspect-ratio:1443/1891}
+
+/* Settings screenshot accompanies the combined spectra preview. */
+.overview-detail{margin-top:24px}
+.overview-detail .overview-image-stage{aspect-ratio:1509/1727}
+.overview-detail figcaption{font-size:10px;gap:8px}

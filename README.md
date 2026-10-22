@@ -16,7 +16,7 @@ The download buttons use absolute URLs to those same files. On page load, the si
 
 ## Editing
 
-The Overview section uses five supplied RYBA screenshots and figures, with a consistent frame. Select an image to open the full-size dialog or follow its original-image link. Keep captions descriptive and preserve useful alternative text. Image bytes and scientific content are preserved; the combined spectra image keeps its portrait aspect ratio. The logo frame is CSS, so it can be adjusted without modifying either image.
+The Overview section uses supplied RYBA screenshots and figures across five views, with a consistent frame. Select an image to open the full-size dialog or follow its original-image link. Keep captions descriptive and preserve useful alternative text. Image bytes and scientific content are preserved; the combined spectra image keeps its portrait aspect ratio. The logo frame is CSS, so it can be adjusted without modifying either image.
 
 Preview locally with `python -m http.server 8000` from the repository root. The static page also renders without JavaScript; JavaScript adds the overview tabs and refreshes download links.
 
@@ -57,13 +57,16 @@ The homepage anchors are not separate sitemap URLs.
 | View | Website asset | Supplied source |
 | --- | --- | --- |
 | Geometry & input | assets/img/overview-geometry-workshop.png | obrazek(20261021-203939).png |
-| IR · UV–Vis · NMR | assets/img/overview-spectra-user.png | Spectra.png |
+| IR · UV–Vis · NMR | assets/img/overview-spectra-2.png | Spectra2.png |
+| UV–Vis settings detail | assets/img/overview-uvvis-settings.png | Spectra2_detail.png |
 | Thermochemistry | assets/img/overview-thermochemistry-user.png | Reaction_thermochemistry(2).png |
 | GOAT explorer | assets/img/overview-goat-user.png | GOAT.png |
 | Coordinate scans | assets/img/overview-coordinate-scans-user.png | obrazek(20261022-121035).png |
 
-The four new images retain the exact supplied PNG bytes; hashes and dimensions are recorded in `assets/data/supplied-overview-images.json`. The existing geometry screenshot is also unmodified. Images scale inside their frames and remain accessible at full size. The portrait spectra composite displays all three plots without a crop.
+The supplied images retain their exact PNG bytes; hashes and dimensions are recorded in `assets/data/supplied-overview-images.json`. The existing geometry screenshot is also unmodified. Images scale inside their frames and remain accessible at full size. The portrait spectra composite displays all three plots without a crop.
 
 The spectroscopy copy explicitly covers IR, UV–Vis and NMR. Force-field coordinate scans have their own feature entry and Overview tab. The thermochemical image uses kJ/mol. GOAT's supplied population chart is normalised within the filtered subset; its selection controls retain the full-ensemble coverage.
 
 Earlier data-rendering scripts, rendered figures and provenance files remain as historical source references. They no longer supply the active Overview images. The Tutorials section remains under construction.
+
+The spectra view also shows the supplied UV–Vis appearance-settings screenshot beside the main composite. Both figures have full-size links and preserve their portrait aspect ratios.

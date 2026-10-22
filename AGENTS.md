@@ -9,7 +9,7 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - Match the main website palette: cream #F7F4EE, text #2B2B2B, teal #2F5D62, hover #163A40, navigation #af9d83, border #BFB4A5, footer #D9D0C3, muted #5E564D.
 - Match its fonts: IBM Plex Sans for headings/navigation/buttons, IBM Plex Serif for body text.
 - Preserve the supplied default RYBA logo and the alternate larger-fish logo. Swap to the alternate on hover and keyboard focus; keep the touch toggle.
-- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview uses five user-supplied RYBA images: geometry/input, combined IR–UV–Vis–NMR spectra, thermochemistry, GOAT, and coordinate scans. Keep the spectra and force-field scan capabilities explicit.
+- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview has five views using user-supplied RYBA images: geometry/input, combined IR–UV–Vis–NMR spectra, thermochemistry, GOAT, and coordinate scans. Keep the spectra and force-field scan capabilities explicit.
 - Keep CNAME set to ryba.nevesely.science and preserve .nojekyll. Hosting is GitHub Pages in this repository.
 
 ## Release history and numbering
@@ -39,10 +39,12 @@ This repository publishes the static website at https://ryba.nevesely.science.
 ## Overview images
 
 - Use the supplied images as-is; preserve original PNG bytes, scientific structures, data, units, axes and labels. CSS may frame and scale them without cropping their scientific content.
-- Geometry/input uses assets/img/overview-geometry-workshop.png, the earlier supplied Geometry Workshop screenshot. The four newer images are listed in assets/data/supplied-overview-images.json.
+- Geometry/input uses assets/img/overview-geometry-workshop.png, the earlier supplied Geometry Workshop screenshot. The supplied image sources are listed in assets/data/supplied-overview-images.json.
 - The spectra tab combines IR, UV–Vis and NMR in the supplied portrait composite. Mention all three in the feature and Overview copy. Preserve its natural portrait aspect ratio and the full-size image viewer.
 - Coordinate scans replace the separate IR Overview tab because IR is included in the combined spectra tab. Describe scans as integrated force-field scans; the supplied example is a relaxed MMFF94 dihedral scan, not an ORCA quantum calculation.
 - The new thermochemistry export uses kJ/mol; do not carry over kcal/mol descriptions from previous figures.
 - The supplied GOAT image shows filtered conformers, with populations renormalised within the selected subset. Do not describe it as a two-conformer ghost overlay or a complete unfiltered population distribution.
 - Preserve the full-size dialog, close button, Escape support, focus restoration and direct image links. Links must still work without JavaScript.
 - Earlier rendered figures and their scripts/provenance are historical assets, not active previews. Do not overwrite the user's supplied images with generated replacements unless explicitly asked.
+
+- The current spectra composite is assets/img/overview-spectra-2.png (Spectra2.png). The accompanying assets/img/overview-uvvis-settings.png (Spectra2_detail.png) appears below the spectra copy and opens in the same full-size viewer. Preserve both supplied PNGs and their natural aspect ratios.

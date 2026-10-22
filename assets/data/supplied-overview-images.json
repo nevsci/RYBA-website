@@ -32,6 +32,22 @@
       "height": 858,
       "sha256": "b9800cb38c2f76303d5e376b8d6f51d685fc57b50eb3c54abaedee79beb3728d",
       "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-spectra-2.png",
+      "source_filename": "Spectra2.png",
+      "width": 1443,
+      "height": 1891,
+      "sha256": "a7a7031c8c7674891e4e8b1d8f6f0fad17efc0720ada5c12e1188a5eceef4536",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-uvvis-settings.png",
+      "source_filename": "Spectra2_detail.png",
+      "width": 1509,
+      "height": 1727,
+      "sha256": "621222a0904d82b6f07004d2d311b18c5a647a108352d2db3cc6b43e5a24865c",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
     }
   ]
 }
