@@ -9,7 +9,7 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - Match the main website palette: cream #F7F4EE, text #2B2B2B, teal #2F5D62, hover #163A40, navigation #af9d83, border #BFB4A5, footer #D9D0C3, muted #5E564D.
 - Match its fonts: IBM Plex Sans for headings/navigation/buttons, IBM Plex Serif for body text.
 - Preserve the supplied default RYBA logo and the alternate larger-fish logo. Swap to the alternate on hover and keyboard focus; keep the touch toggle.
-- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview uses the user-provided Geometry Workshop screenshot, UV–Vis screenshot and exported thermochemical diagram, plus data-derived GOAT and IR visualisations. Keep dedicated GOAT and IR feature entries.
+- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview uses five scientific visualisations generated from the user’s saved RYBA project and ORCA files. Keep dedicated GOAT and IR feature entries.
 - Keep CNAME set to ryba.nevesely.science and preserve .nojekyll. Hosting is GitHub Pages in this repository.
 
 ## Release history and numbering
@@ -39,12 +39,20 @@ This repository publishes the static website at https://ryba.nevesely.science.
 ## Overview images
 
 - Preserve the supplied scientific screenshots and exported graph without generative edits, altered values or redrawn molecular structures.
-- The overview image assets retain the original uploaded bytes. CSS frames the previews and crops only the UV–Vis thumbnail to focus on the spectrum. Full originals are accessible through native image links and the accessible dialog.
+- The original uploaded screenshots remain unchanged in the repository for provenance. Active previews use newly rendered scientific figures in separate assets; do not crop their axes, structures or labels. Full figures are accessible through native image links and the accessible dialog.
 - Preserve the full-size view, close button, Escape support and direct original-image links. Image links must still work when JavaScript is unavailable.
 
 ## Data-derived overview visualisations
 
-- GOAT and IR images are scientific data illustrations, not application screenshots. Preserve that distinction in the visible captions/note.
+- All five active Overview images are scientific data illustrations. Keep their data origin clear in captions and the section note.
 - Regenerate with scripts/render-overview.py using the original local ORCA files; do not upload the raw outputs or ensemble here. assets/data/overview-provenance.json records hashes and rendering choices.
 - GOAT uses the reported final populations at 298.15 K, checked against 39 XYZ frames and their energies. Selected conformers use source IDs 0 and 1; rigid alignment on file atoms 1–6 changes only the view. Hide hydrogens for readability.
 - IR uses the last frequency job in TS1.out: 119 positive modes and a separate imaginary mode at −147.16 cm⁻¹. Keep scale/broadening and imaginary-mode disclosure visible; do not imply experimental data or a minimum.
+
+## Saved-project visualisations
+
+- Regenerate Geometry Workshop, UV–Vis and thermochemistry with scripts/render-project-overview.py and the original saved project ZIP. Keep the ZIP, extracted state and raw output files local; publish only rendered figures, scripts and provenance.
+- assets/data/project-overview-provenance.json records source hashes and processing choices. The archive state hash must match its manifest.
+- Geometry uses Fum_ketone: 23 original atoms, saved assigned bond orders and unchanged coordinates; camera rotations only.
+- UV–Vis uses all ten TTT-wHPBE singlet transitions, checked against the embedded electric-dipole table, with the saved Gaussian FWHM 0.30 eV. Keep oscillator strengths separate from the normalised curve axis.
+- Thermochemistry follows the saved seven-state order and geometry assignments, using the final printed Gibbs records at 298.15 K, in kcal/mol relative to Closed form. Different source atom orders must not be treated as matching atom indices.

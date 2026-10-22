@@ -1,0 +1,124 @@
+{
+  "kind": "Scientific data visualisations from a saved RYBA project, not interface screenshots.",
+  "source_archive_sha256": "9c3c51ea9b23b761cd924984a272a023ce0d57797297a8b50af636df8416518e",
+  "source_state_sha256": "759e41e4f21f1a133cb4b6e139501f6f8420833440ea9b86ee196433e1f787a3",
+  "source_app_version": "1.31.2",
+  "geometry": {
+    "molecule_name": "Fum_ketone",
+    "atom_count": 23,
+    "formula": "C8H11FO3",
+    "assigned_connections": 22,
+    "double_bonds": 3,
+    "distances_A": {
+      "C4-C5": 1.3390805901165796,
+      "C3-O10": 1.2215453346043266
+    },
+    "notes": "Unmodified saved input coordinates and assigned connectivity; hydrogens shown. Camera rotations only."
+  },
+  "uvvis": {
+    "result_name": "TTT-wHPBE",
+    "transition_count": 10,
+    "source_table": "transition electric dipole moments (length gauge)",
+    "fwhm_eV": 0.3,
+    "shape": "Gaussian in photon energy, sampled on a wavelength axis; normalised maximum",
+    "display_range_nm": [
+      250,
+      800
+    ],
+    "transition_energies_eV": [
+      2.473106,
+      2.551203,
+      3.618839,
+      3.758909,
+      3.958743,
+      3.995178,
+      4.351199,
+      4.453008,
+      4.473695,
+      4.474873
+    ],
+    "transition_wavelengths_nm": [
+      501.3,
+      486.0,
+      342.6,
+      329.8,
+      313.2,
+      310.3,
+      284.9,
+      278.4,
+      277.1,
+      277.1
+    ],
+    "oscillator_strengths": [
+      0.966331198,
+      0.000149823,
+      2.171e-06,
+      0.398794967,
+      3.4342e-05,
+      0.372830056,
+      0.024825986,
+      0.020498672,
+      0.150336861,
+      0.001294433
+    ],
+    "notes": "Saved energies, wavelengths and strengths checked against embedded raw ORCA table. Display range chosen for legibility; no spectral shift or frequency scaling."
+  },
+  "thermochemistry": {
+    "recipe": "Final printed Gibbs free energy, no additional correction",
+    "temperature_K": 298.15,
+    "pressure_atm": 1,
+    "units": "kcal/mol",
+    "reference": "Closed form",
+    "state_labels": [
+      "Closed form",
+      "TS1",
+      "CCC",
+      "TS2",
+      "CTC",
+      "TS3",
+      "CTT"
+    ],
+    "result_names": [
+      "SP",
+      "TS1",
+      "CCC",
+      "TS2",
+      "CTC",
+      "TS3",
+      "CTT"
+    ],
+    "geometry_indices": [
+      5,
+      7,
+      11,
+      3,
+      10,
+      99,
+      10
+    ],
+    "gibbs_Eh": [
+      -186.77454512,
+      -186.75659122,
+      -186.75884038,
+      -186.7281999,
+      -186.76441447,
+      -186.74893819,
+      -186.76291989
+    ],
+    "relative_gibbs_kcal_mol": [
+      0.0,
+      11.266242345254291,
+      9.854873136700277,
+      29.082064624618226,
+      6.357078852782988,
+      16.068591175060618,
+      7.2949419624245175
+    ],
+    "forward_barriers_kcal_mol": [
+      11.266242345254291,
+      19.22719148791795,
+      9.711512322277631
+    ],
+    "notes": "Final saved Gibbs values checked against last raw printed records. Same saved state order and geometry assignments; rigid rotations/translations only. Thumbnail connections inferred by distance; no invented bond orders."
+  }
+}

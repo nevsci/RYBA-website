@@ -55,14 +55,11 @@
 @media(max-width:1000px){.tutorial-grid{gap:14px}.tutorial-card{padding:23px 18px 20px}.tutorial-card h3{font-size:21px}}
 @media(max-width:760px){.tutorial-grid{grid-template-columns:1fr;gap:16px}.tutorial-construction{padding:17px 18px;gap:12px}.tutorial-construction-copy{font-size:13px}.tutorial-card{padding:24px}.tutorial-card h3{font-size:23px;min-height:0}.tutorial-category{margin-bottom:17px}.tutorial-note{font-size:11px}}
 
-/* Real overview assets: frame/crop only the preview; preserve original image data. */
+/* Scientific overview figures share a frame and an accessible full-size viewer. */
 .overview-figure{margin:0;min-width:0}
 .overview-image-link{display:block;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 16px 34px rgba(63,54,42,.08)}
 .overview-image-stage{position:relative;display:block;aspect-ratio:16/10;background:#172025;overflow:hidden}
 .overview-image-stage>img{display:block;width:100%;height:100%;object-fit:contain}
-.overview-image-stage.is-chart{background:#fff}
-.overview-spectrum-crop{position:absolute;display:block;left:0;top:50%;transform:translateY(-50%);width:100%;aspect-ratio:2.1;overflow:hidden}
-.overview-spectrum-crop>img{position:absolute;bottom:0;left:0;display:block;width:100%;height:auto;max-width:none}
 .overview-figure figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-top:13px;font:400 11px/1.6 var(--sans);color:var(--muted)}
 .overview-open{font:600 11px/1.6 var(--sans);white-space:nowrap;text-decoration:none}
 .overview-image-link:hover{border-color:var(--accent)}

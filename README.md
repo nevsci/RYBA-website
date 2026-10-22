@@ -16,7 +16,7 @@ The download buttons use absolute URLs to those same files. On page load, the si
 
 ## Editing
 
-The Overview section uses the supplied real Geometry Workshop and UV–Vis screenshots, plus an exported thermochemical energy profile. The scientific image files are unchanged; CSS frames the previews and focuses the UV–Vis thumbnail on the plot. Select an image to open the full-size dialog or follow its original-image link. Keep captions descriptive and preserve useful alternative text. The logo frame is CSS, so it can be adjusted without modifying either image.
+The Overview section uses five scientific visualisations from real RYBA project and ORCA data, with a consistent dark frame. Select an image to open the full-size dialog or follow its original-image link. Keep captions descriptive and preserve useful alternative text. The original screenshots remain unchanged as source references. The logo frame is CSS, so it can be adjusted without modifying either image.
 
 Preview locally with `python -m http.server 8000` from the repository root. The static page also renders without JavaScript; JavaScript adds the overview tabs and refreshes download links.
 
@@ -74,3 +74,19 @@ python scripts/render-overview.py --ir /path/to/TS1.out --goat /path/to/SP_171.o
 ```
 
 Keep the full-size image viewer and the visible distinction between application screenshots and data visualisations.
+
+## Figures from the saved RYBA project
+
+The first three active Overview figures are now rendered from the supplied saved project:
+
+- `assets/img/overview-geometry-render.png`: the 23-atom Fum_ketone structure from the input Geometry Workshop, including saved bond orders and hydrogens. No optimisation or geometry changes are applied.
+- `assets/img/overview-uvvis-render.png`: all ten singlet transitions in TTT-wHPBE, checked against the embedded ORCA length-gauge table. Gaussian broadening retains the saved 0.30 eV FWHM; the profile is normalised and plotted over 250–800 nm, with oscillator strengths on a separate axis.
+- `assets/img/overview-thermochemistry-render.png`: Closed form → TS1 → CCC → TS2 → CTC → TS3 → CTT, using final printed Gibbs energies at 298.15 K relative to Closed form, with the saved geometry assignments. Independent rigid camera rotations accommodate different source atom orders. Hydrogens are hidden in the small structure views.
+
+All three figures are 2400 × 1500 PNGs, with no thumbnail crop. `assets/data/project-overview-provenance.json` records the archive/state hashes and exact rendering choices. The project ZIP, extracted state and embedded outputs remain local. To regenerate:
+
+```sh
+python scripts/render-project-overview.py /path/to/saved-project.ryba.zip
+```
+
+The earlier supplied screenshots and thermochemical export keep their original filenames and bytes as source references. They are no longer the active website previews.
