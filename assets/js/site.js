@@ -77,7 +77,8 @@ if ('IntersectionObserver' in window) {
 // Keep the verified HTML fallback links in sync whenever editing the website.
 const DOWNLOADS_PAGE = 'https://nevesely.science/downloads/';
 function formatFor(url) {
-  if (/\/Windows\/RYBA_[^/]+\.exe$/i.test(url.pathname)) return 'windows';
+  if (/\/Windows\/RYBA_[^/]+_x64-setup\.exe$/i.test(url.pathname)) return 'windows-setup';
+  if (/\/Windows\/RYBA_[^/]+_windows-x86_64_portable\.exe$/i.test(url.pathname)) return 'windows-portable';
   if (/\/Linux\/RYBA_[^/]+\.deb$/i.test(url.pathname)) return 'deb';
   if (/\/Linux\/RYBA_[^/]+\.AppImage$/i.test(url.pathname)) return 'appimage';
   if (/\/MacOS\/RYBA_[^/]+\.app\.zip$/i.test(url.pathname)) return 'macos';
@@ -100,7 +101,7 @@ async function refreshDownloads() {
       if (format && !found.has(format)) found.set(format, { url, sourceLink });
     });
     // Refresh as a complete set, so an incomplete response cannot mix releases.
-    if (!['windows', 'deb', 'appimage', 'macos'].every(format => found.has(format))) return;
+    if (!['windows-setup', 'windows-portable', 'deb', 'appimage', 'macos'].every(format => found.has(format))) return;
     for (const [format, { url, sourceLink }] of found) {
       const target = document.querySelector('[data-download="' + format + '"]');
       if (!target) continue;
