@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css?v=20261022-spectra2">
+  <link rel="stylesheet" href="assets/css/site.css?v=20261113-overview">
   <script src="assets/js/site.js" defer></script>
   <script src="assets/js/analytics.js" defer></script>
   <script data-goatcounter="https://nevesely.goatcounter.com/count" src="https://gc.zgo.at/count.js" defer></script>
@@ -164,15 +164,26 @@
             <div class="preview-copy">
               <span class="small-label">Local-compute preview</span>
               <h3>Find low-energy conformers.</h3>
-              <p>Start from a molecule in the Geometry Workshop and search with MMFF94, GFN-FF, GFN2-xTB or AIMNet2. Run independent sampling passes and see whether they rediscover the lowest-energy structure found. Search eligible E/Z configurations separately, including in rings of eight or more atoms.</p>
-              <p>Review the results in the GOAT Workshop and export numbered ORCA inputs for selected conformers using your active Input Builder settings. Running the search requires the local-compute launcher.</p>
+              <p>Start from a molecule in the Geometry Workshop. Run independent sampling passes and see whether they rediscover the lowest-energy structure found. Search eligible E/Z configurations separately, including in rings of eight or more atoms.</p>
+              <p>Review the results in the GOAT Workshop and export numbered ORCA inputs for selected conformers using your active Input Builder settings.</p>
+              <p class="overview-availability">The upcoming desktop package is planned to include MMFF94 and CPU AIMNet2. On supported systems, RYBA downloads the optional xTB engines on first use. The current preview uses the local-compute launcher.</p>
             </div>
-            <figure class="overview-figure">
-              <a class="overview-image-link" href="assets/img/overview-conformer-search.png" data-overview-image data-image-title="Conformer search in the Geometry Workshop" data-image-alt="Cyclooctene in the Geometry Workshop after a two-pass MMFF94 conformer search with E/Z sampling enabled." aria-label="View the Conformer Search image at full size">
-                <span class="overview-image-stage" style="aspect-ratio:1412/960"><img src="assets/img/overview-conformer-search.png" width="1412" height="960" loading="lazy" decoding="async" alt="Cyclooctene in the Geometry Workshop after a two-pass MMFF94 conformer search with E/Z sampling enabled."></span>
-              </a>
-              <figcaption><span>Cyclooctene · MMFF94 search with two sampling passes</span><a class="overview-open" href="assets/img/overview-conformer-search.png" data-overview-image data-image-title="Conformer search in the Geometry Workshop" data-image-alt="Cyclooctene in the Geometry Workshop after a two-pass MMFF94 conformer search with E/Z sampling enabled.">View full image <span aria-hidden="true">↗</span></a></figcaption>
-            </figure>
+            <div class="overview-gallery">
+              <figure class="overview-figure">
+                <a class="overview-image-link" href="assets/img/overview-conformer-search-user.png" data-overview-image data-image-title="AIMNet2 conformer search in the Geometry Workshop" data-image-alt="The Geometry Workshop running an AIMNet2 search of the fumarate example with E/Z sampling and live progress." aria-label="View AIMNet2 conformer search in the Geometry Workshop at full size">
+                  <span class="overview-image-stage"><img src="assets/img/overview-conformer-search-user.png" width="2047" height="1233" loading="lazy" decoding="async" alt="The Geometry Workshop running an AIMNet2 search of the fumarate example with E/Z sampling and live progress."></span>
+                </a>
+                <figcaption><span>Geometry Workshop · AIMNet2 search with E/Z sampling</span><a class="overview-open" href="assets/img/overview-conformer-search-user.png" data-overview-image data-image-title="AIMNet2 conformer search in the Geometry Workshop" data-image-alt="The Geometry Workshop running an AIMNet2 search of the fumarate example with E/Z sampling and live progress.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+              <div class="overview-gallery-detail">
+              <figure class="overview-figure">
+                <a class="overview-image-link" href="assets/img/overview-conformer-results-user.png" data-overview-image data-image-title="Conformer selection and ORCA export" data-image-alt="The GOAT Workshop showing energy-window selection by E/Z configuration, the conformer table and numbered ORCA input export settings." aria-label="View Conformer selection and ORCA export at full size">
+                  <span class="overview-image-stage"><img src="assets/img/overview-conformer-results-user.png" width="910" height="2048" loading="lazy" decoding="async" alt="The GOAT Workshop showing energy-window selection by E/Z configuration, the conformer table and numbered ORCA input export settings."></span>
+                </a>
+                <figcaption><span>GOAT Workshop · select conformers and prepare ORCA inputs</span><a class="overview-open" href="assets/img/overview-conformer-results-user.png" data-overview-image data-image-title="Conformer selection and ORCA export" data-image-alt="The GOAT Workshop showing energy-window selection by E/Z configuration, the conformer table and numbered ORCA input export settings.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+              </div>
+            </div>
           </div>
         </div>
         <div class="preview-panel" id="preview-si" aria-labelledby="tab-si">
@@ -183,12 +194,20 @@
               <p>Build a collection from loaded ORCA results, selected conformers or reaction-path structures. Choose which energies, Cartesian coordinates, frequencies and excited-state results to include. RYBA groups calculations that share a method so you can describe the protocol once.</p>
               <p>Preview the document, then export an editable Word file (.docx) with native tables and text.</p>
             </div>
-            <figure class="overview-figure is-portrait">
-              <a class="overview-image-link" href="assets/img/overview-si-generator.png" data-overview-image data-image-title="Supporting information preview" data-image-alt="An illustrative supporting information preview for water, showing a methodology section, energy summary table and molecular structure." aria-label="View the SI Generator image at full size">
-                <span class="overview-image-stage" style="aspect-ratio:576/776"><img src="assets/img/overview-si-generator.png" width="576" height="776" loading="lazy" decoding="async" alt="An illustrative supporting information preview for water, showing a methodology section, energy summary table and molecular structure."></span>
-              </a>
-              <figcaption><span>Supporting information preview · illustrative water calculation</span><a class="overview-open" href="assets/img/overview-si-generator.png" data-overview-image data-image-title="Supporting information preview" data-image-alt="An illustrative supporting information preview for water, showing a methodology section, energy summary table and molecular structure.">View full image <span aria-hidden="true">↗</span></a></figcaption>
-            </figure>
+            <div class="overview-gallery overview-gallery-pair">
+              <figure class="overview-figure">
+                <a class="overview-image-link" href="assets/img/overview-si-document-user.png" data-overview-image data-image-title="Computational supporting information document" data-image-alt="A computational supporting information document with ORCA methodology, an energy summary for seven structures, a molecular illustration and Cartesian coordinates." aria-label="View Computational supporting information document at full size">
+                  <span class="overview-image-stage"><img src="assets/img/overview-si-document-user.png" width="1047" height="1669" loading="lazy" decoding="async" alt="A computational supporting information document with ORCA methodology, an energy summary for seven structures, a molecular illustration and Cartesian coordinates."></span>
+                </a>
+                <figcaption><span>Exported supporting information · methodology and molecular data</span><a class="overview-open" href="assets/img/overview-si-document-user.png" data-overview-image data-image-title="Computational supporting information document" data-image-alt="A computational supporting information document with ORCA methodology, an energy summary for seven structures, a molecular illustration and Cartesian coordinates.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+              <figure class="overview-figure">
+                <a class="overview-image-link" href="assets/img/overview-si-settings-user.png" data-overview-image data-image-title="Reports and Supporting Information settings" data-image-alt="The Reports and Supporting Information workspace showing Word export, detail presets and selectable molecular and thermochemistry properties." aria-label="View Reports and Supporting Information settings at full size">
+                  <span class="overview-image-stage"><img src="assets/img/overview-si-settings-user.png" width="1501" height="1649" loading="lazy" decoding="async" alt="The Reports and Supporting Information workspace showing Word export, detail presets and selectable molecular and thermochemistry properties."></span>
+                </a>
+                <figcaption><span>Reports &amp; SI · choose the document contents</span><a class="overview-open" href="assets/img/overview-si-settings-user.png" data-overview-image data-image-title="Reports and Supporting Information settings" data-image-alt="The Reports and Supporting Information workspace showing Word export, detail presets and selectable molecular and thermochemistry properties.">View full image <span aria-hidden="true">↗</span></a></figcaption>
+              </figure>
+            </div>
           </div>
         </div>
         <p class="preview-note">Screenshots and figures from RYBA. Select an image to enlarge.</p>

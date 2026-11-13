@@ -48,6 +48,38 @@
       "height": 1727,
       "sha256": "621222a0904d82b6f07004d2d311b18c5a647a108352d2db3cc6b43e5a24865c",
       "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-conformer-search-user.png",
+      "source_filename": "obrazek(20261113-121837).png",
+      "width": 2047,
+      "height": 1233,
+      "sha256": "58c375a8777df82fb106cf19468bdca939b84ef5dd4235372d9cac5d148d1702",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-conformer-results-user.png",
+      "source_filename": "obrazek(20261113-122428).png",
+      "width": 910,
+      "height": 2048,
+      "sha256": "8bd8535dc8c438132badebab9621729acb28f7ca5fdf81b5411986f5249ab038",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-si-document-user.png",
+      "source_filename": "obrazek(10).png",
+      "width": 1047,
+      "height": 1669,
+      "sha256": "3f9c6d1b3dff5779a484bd567cae91ab2cdfa5aadb319383f2f9d97a95a026c2",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
+    },
+    {
+      "path": "assets/img/overview-si-settings-user.png",
+      "source_filename": "obrazek(20261113-121344).png",
+      "width": 1501,
+      "height": 1649,
+      "sha256": "eb14b709d863a643558242e9da1b3992d7ca9cf8f83729fff82636cef53e0d72",
+      "processing": "Original supplied PNG bytes retained; CSS framing only."
     }
   ]
 }

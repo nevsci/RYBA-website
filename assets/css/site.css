@@ -82,3 +82,12 @@
 .overview-detail{margin-top:24px}
 .overview-detail .overview-image-stage{aspect-ratio:1509/1727}
 .overview-detail figcaption{font-size:10px;gap:8px}
+
+.overview-gallery{display:grid;gap:20px;min-width:0;align-items:start}
+.overview-gallery .overview-image-stage{aspect-ratio:auto}
+.overview-gallery .overview-image-stage>img{height:auto}
+.overview-gallery-detail{width:min(100%,480px);margin-inline:auto}
+.overview-gallery-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.preview-panel:has(.overview-gallery) .preview-layout{align-items:start}
+.overview-availability{border-left:2px solid var(--accent);padding-left:12px}
+@media(max-width:520px){.overview-gallery-pair{grid-template-columns:1fr}}
