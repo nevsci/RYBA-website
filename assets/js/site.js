@@ -76,12 +76,12 @@ if ('IntersectionObserver' in window) {
 // Canonical source: the main website's download page. Never mirror installers here.
 // Keep the verified HTML fallback links in sync whenever editing the website.
 const DOWNLOADS_PAGE = 'https://nevesely.science/downloads/';
-function formatFor(url) {
-  if (/\/Windows\/RYBA_[^/]+_x64-setup\.exe$/i.test(url.pathname)) return 'windows-setup';
-  if (/\/Windows\/RYBA_[^/]+_windows-x86_64_portable\.exe$/i.test(url.pathname)) return 'windows-portable';
-  if (/\/Linux\/RYBA_[^/]+\.deb$/i.test(url.pathname)) return 'deb';
-  if (/\/Linux\/RYBA_[^/]+\.AppImage$/i.test(url.pathname)) return 'appimage';
-  if (/\/MacOS\/RYBA_[^/]+\.app\.zip$/i.test(url.pathname)) return 'macos';
+function formatFor(filename) {
+  if (/^RYBA_\d+\.\d+\.\d+_x64-setup\.exe$/i.test(filename)) return 'windows-setup';
+  if (/^RYBA_\d+\.\d+\.\d+_windows-x86_64_portable\.(?:exe|zip)$/i.test(filename)) return 'windows-portable';
+  if (/^RYBA_\d+\.\d+\.\d+_amd64\.deb$/i.test(filename)) return 'deb';
+  if (/^RYBA_\d+\.\d+\.\d+_amd64\.AppImage$/i.test(filename)) return 'appimage';
+  if (/^RYBA_\d+\.\d+\.\d+_macos-universal\.app\.zip$/i.test(filename)) return 'macos';
   return null;
 }
 async function refreshDownloads() {
@@ -96,12 +96,18 @@ async function refreshDownloads() {
     const found = new Map();
     page.querySelectorAll('a[href]').forEach(sourceLink => {
       const url = new URL(sourceLink.getAttribute('href'), DOWNLOADS_PAGE);
-      if (url.origin !== 'https://nevesely.science' || !url.pathname.startsWith('/assets/projects/RYBA/')) return;
-      const format = formatFor(url);
+      if (url.protocol !== 'https:' || url.username || url.password) return;
+      const filename = url.pathname.split('/').pop();
+      const format = formatFor(filename);
+      const version = filename.match(/^RYBA_(\d+\.\d+\.\d+)_/i)?.[1];
+      const expected = {deb: 'linux-deb', appimage: 'linux-appimage', macos: 'macos-universal'}[format] || format;
+      if (sourceLink.getAttribute('data-goatcounter-click') !== `download-ryba-${version}-${expected}`) return;
       if (format && !found.has(format)) found.set(format, { url, sourceLink });
     });
     // Refresh as a complete set, so an incomplete response cannot mix releases.
     if (!['windows-setup', 'windows-portable', 'deb', 'appimage', 'macos'].every(format => found.has(format))) return;
+    const versions = new Set([...found.values()].map(({url}) => url.pathname.split('/').pop().match(/^RYBA_(\d+\.\d+\.\d+)_/i)?.[1]));
+    if (versions.size !== 1) return;
     for (const [format, { url, sourceLink }] of found) {
       const target = document.querySelector('[data-download="' + format + '"]');
       if (!target) continue;
