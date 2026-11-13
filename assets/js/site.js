@@ -81,7 +81,7 @@ function formatFor(filename) {
   if (/^RYBA_\d+\.\d+\.\d+_windows-x86_64_portable\.(?:exe|zip)$/i.test(filename)) return 'windows-portable';
   if (/^RYBA_\d+\.\d+\.\d+_amd64\.deb$/i.test(filename)) return 'deb';
   if (/^RYBA_\d+\.\d+\.\d+_amd64\.AppImage$/i.test(filename)) return 'appimage';
-  if (/^RYBA_\d+\.\d+\.\d+_macos-universal\.app\.zip$/i.test(filename)) return 'macos';
+  if (/^RYBA_\d+\.\d+\.\d+_macos-(?:universal|arm64)\.app\.zip$/i.test(filename)) return 'macos';
   return null;
 }
 async function refreshDownloads() {
@@ -100,7 +100,7 @@ async function refreshDownloads() {
       const filename = url.pathname.split('/').pop();
       const format = formatFor(filename);
       const version = filename.match(/^RYBA_(\d+\.\d+\.\d+)_/i)?.[1];
-      const expected = {deb: 'linux-deb', appimage: 'linux-appimage', macos: 'macos-universal'}[format] || format;
+      const expected = {deb: 'linux-deb', appimage: 'linux-appimage', macos: filename.includes('_macos-arm64.') ? 'macos-arm64' : 'macos-universal'}[format] || format;
       if (sourceLink.getAttribute('data-goatcounter-click') !== `download-ryba-${version}-${expected}`) return;
       if (format && !found.has(format)) found.set(format, { url, sourceLink });
     });
