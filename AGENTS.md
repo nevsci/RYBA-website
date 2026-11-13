@@ -9,12 +9,12 @@ This repository publishes the static website at https://ryba.nevesely.science.
 - Match the main website palette: cream #F7F4EE, text #2B2B2B, teal #2F5D62, hover #163A40, navigation #af9d83, border #BFB4A5, footer #D9D0C3, muted #5E564D.
 - Match its fonts: IBM Plex Sans for headings/navigation/buttons, IBM Plex Serif for body text.
 - Preserve the supplied default RYBA logo and the alternate larger-fish logo. Swap to the alternate on hover and keyboard focus; keep the touch toggle.
-- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview has five views using user-supplied RYBA images: geometry/input, combined IR–UV–Vis–NMR spectra, thermochemistry, GOAT, and coordinate scans. Keep the spectra and force-field scan capabilities explicit.
+- Features is primarily text, Overview is primarily visual, Downloads lists the shared application files. Overview has seven views: geometry/input, combined IR–UV–Vis–NMR spectra, thermochemistry, GOAT, coordinate scans, conformer search, and the SI generator. The Conformer Search and SI Generator views use captures from RYBA. Keep the spectra and force-field scan capabilities explicit.
 - Keep CNAME set to ryba.nevesely.science and preserve .nojekyll. Hosting is GitHub Pages in this repository.
 
 ## Release history and numbering
 
-- Use Roman numerals for all website sequence markers. Main sections use larger framed I–IV tiles; features use smaller I–VIII markers, Overview tabs I–V, and tutorial outlines I–III. Preserve the existing square frames, palette and typographic hierarchy. Do not change chemical symbols or numeric scientific data inside images or prose.
+- Use Roman numerals for all website sequence markers. Main sections use larger framed I–IV tiles; features use smaller I–VIII markers, Overview tabs I–VII, and tutorial outlines I–III. Preserve the existing square frames, palette and typographic hierarchy. Do not change chemical symbols or numeric scientific data inside images or prose.
 - Keep the native, initially collapsed Older versions disclosure below the latest downloads. It currently has no release entries; do not list the current release as an older version.
 - When publishing a new compiled RYBA release, preserve the currently published version's immutable, versioned files in nevsci/nevsci.github.io. Do not overwrite or delete them.
 - Upload new binaries once, to the main website repository. Update its downloads.md and this website's latest HTML links/version labels to those same new files.
